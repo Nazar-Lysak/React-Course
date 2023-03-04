@@ -1,0 +1,33 @@
+@use './styles/reset.scss';
+@import './styles/varibles.scss';
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $bg_primary;
+
+  * {
+    font-family: $poppins;
+  }
+
+  .wrapperXL {
+    max-width: $xl-container;
+  }
+
+  .wrapperM {
+    max-width: $m-container;
+  }
+
+  .wrapperS {
+    max-width: $s-container;
+  }
+
+  .wrapperXL,
+  .wrapperM,
+  .wrapperS {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+@use './fonts.scss';
+
+// Fonts
+
+$poppins: 'Poppins', sans-serif;
+$quando: 'Quando', serif;
+
+// brakepoints & width
+
+$xl-container: 1526px;
+$m-container: 1278px;
+$s-container: 1210px;
+
+// Colorss
+
+$bg_primary: #e5e5e5;
+
+:export {
+    poppins: $poppins;
+    quando: $quando;
+
+    
+}
