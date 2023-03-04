@@ -1,25 +1,28 @@
+@import '../../styles/varibles.scss';
+
 .content {
   padding: 48px 52px 160px 52px;
 }
 
 .title {
-  font-family: 'Quando';
+  font-family: $quando;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  color: #000000;
+  color: $dark;
   margin-bottom: 15px;
 }
 
 .text,
- span {
-  font-family: 'Quando';
+span {
+  font-family: $quando;
+  opacity: 0.9;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
-  color: rgba(0, 0, 0, 0.7);
+  color: $dark;
   margin: 8px 0;
 }
 

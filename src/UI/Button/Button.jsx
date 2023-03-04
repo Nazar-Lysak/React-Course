@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import varibles from '../../styles/varibles.scss';
+
 const Btn = styled.button`
   padding: ${(props) => {
     switch (props.type) {
@@ -12,11 +14,11 @@ const Btn = styled.button`
   background: ${(props) => {
     switch (props.type) {
       case 'additional':
-        return '#b1afaf';
+        return varibles.grey;
       case 'warning':
-        return '#ff393999';
+        return varibles.pink;
       default:
-        return '#f8a607';
+        return varibles.orange;
     }
   }};
   border-radius: ${(props) => {
@@ -34,17 +36,19 @@ const Btn = styled.button`
   font-family: ${(props) => {
     switch (props.type) {
       case 'card':
-        return 'Quando';
+        return varibles.quando;
       case 'warning':
-        return 'Quando';
+        return varibles.quando;
       default:
-        return 'Poppins';
+        return varibles.poppins;
     }
   }};
   font-style: normal;
   font-weight: ${(props) => {
     switch (props.type) {
       case 'card':
+        return '400';
+      case 'additional':
         return '400';
       case 'warning':
         return '400';
@@ -82,7 +86,7 @@ const Btn = styled.button`
         return '36px';
     }
   }};
-  color: #ffffff;
+  color: ${varibles.light};
   transition: 0.3s;
   position: ${(props) => {
     switch (props.type) {
@@ -92,26 +96,30 @@ const Btn = styled.button`
         return 'static';
     }
   }};
-  
+
   &:hover {
     background-color: ${(props) => {
       switch (props.type) {
         case 'additional':
-          return '#7c7979';
+          return varibles.greyDark;
         case 'warning':
-          return '#f31b1b99';
+          return varibles.pinkDark;
         default:
-          return '#f86507';
+          return varibles.orangeDark;
       }
     }};
   }
 
   bottom: 0;
-  float: ${(props) => props.position === 'right' ? 'right' : 'none'};
+  float: ${(props) => (props.position === 'right' ? 'right' : 'none')};
 `;
 
 const Button = (props) => {
-  return <Btn type={props.type} position={props.position}>{props.title}</Btn>;
+  return (
+    <Btn type={props.type} position={props.position}>
+      {props.title}
+    </Btn>
+  );
 };
 
 export default Button;

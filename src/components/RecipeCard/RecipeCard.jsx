@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
+import varibles from '../../styles/varibles.scss';
+
 import Image from '../../UI/Image/Image';
 import Button from '../../UI/Button/Button';
 
 const CardWrapper = styled.div`
   height: 331px;
-  background: #ffffff;
-  box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.15);
+  background: ${varibles.light};
+  box-shadow: ${varibles.borderlighten};
   position: relative;
 `;
 

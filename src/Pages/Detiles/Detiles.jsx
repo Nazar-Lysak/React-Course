@@ -13,7 +13,7 @@ const Detiles = ({data}) => {
   return (
     <DetilesWrap className={'wrapperXL'}>
       <RecipeDescriptionPreview data={data} />
-      <RecipeFullDescription data={data}/>
+      <RecipeFullDescription data={data} />
     </DetilesWrap>
   );
 };

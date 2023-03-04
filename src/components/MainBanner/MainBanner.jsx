@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import varibles from '../../styles/varibles.scss';
+
 import Image from '../../UI/Image/Image';
 import Button from '../../UI/Button/Button';
 import Text from '../../UI/Text/Text';
@@ -7,7 +9,7 @@ import Text from '../../UI/Text/Text';
 const Banner = styled.div`
   min-height: 682px;
   margin-bottom: 48px;
-  background: #fcffd8;
+  background: ${varibles.yellowLight};
   display: flex;
   justify-content: center;
   align-items: center;

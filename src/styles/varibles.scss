@@ -13,11 +13,35 @@ $s-container: 1210px;
 
 // Colorss
 
-$bg_primary: #e5e5e5;
+$light:        #fff;
+$dark:         #000;
+$bg_primary:   #e5e5e5;
+$grey:         #b1afaf;
+$grey_light:   #f8f6f6;
+$grey_dark:    #7c7979;
+$pink:         #ff393999;
+$pink_dark:    #f31b1b99;
+$orange:       #f8a607;
+$orange_light: #FFC759;
+$orange_dark:  #f86507;
+$yellow_light: #fcffd8;
+$border-shadow_lighten: 0px 5px 16px rgba(0, 0, 0, 0.15);
+$border-shadow_darken: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 :export {
     poppins: $poppins;
     quando: $quando;
-
-    
+    grey: $grey;
+    greyLight: $grey_light;
+    pink: $pink;
+    pinkDark: $pink_dark;
+    orange: $orange;
+    orangeLight: $orange_light;
+    orangeDark: $orange_dark;
+    yellowLight: $yellow_light;
+    light: $light;
+    dark: $dark;
+    greyDark: $grey_dark;
+    borderDarken: $border-shadow_darken;
+    borderlighten: $border-shadow_lighten;    
 }

@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
+import varibles from '../../styles/varibles.scss';
+
 const Text = styled.p`
-  font-family: 'Poppins';
+  font-family: ${varibles.poppins};
   font-style: normal;
   width: 100%;
   text-align: ${(props) => {
@@ -40,13 +42,13 @@ const Text = styled.p`
   color: ${(props) => {
     switch (props.type) {
       case 'h2':
-        return '#000000';
+        return `${varibles.dark}`;
       case 'h3':
-        return '#000000';
+        return `${varibles.dark}`;
       case 'p':
-        return 'rgba(0, 0, 0, 0.5)';
+        return `${varibles.greyDark}`;
       default:
-        return 'rgba(0, 0, 0, 0.5)';
+        return `${varibles.greyDark}`;
     }
   }};
   margin-bottom: 9px;

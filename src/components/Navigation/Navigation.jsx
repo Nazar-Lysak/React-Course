@@ -1,17 +1,19 @@
 import styled from 'styled-components';
 
+import varibles from '../../styles/varibles.scss';
+
 const Ul = styled.ul`
   display: flex;
   gap: 10px;
 `;
 
 const Li = styled.li`
-  font-family: 'Quando';
+  font-family: ${varibles.quando};
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #000000;
+  color: ${varibles.dark};
   text-transform: uppercase;
   cursor: pointer;
 `;

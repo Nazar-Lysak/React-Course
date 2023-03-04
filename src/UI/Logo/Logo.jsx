@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
+import varibles from '../../styles/varibles.scss';
+
 const H1 = styled.h1`
-  font-family: 'Quando';
+  font-family: ${varibles.quando};
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 30px;
-  color: #000000;
+  color: ${varibles.dark};
 `;
 
 const Logo = ({title}) => {

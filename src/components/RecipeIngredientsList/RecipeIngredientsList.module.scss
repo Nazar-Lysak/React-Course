@@ -1,0 +1,19 @@
+@import '../../styles/varibles.scss';
+
+.list {
+  padding-top: 30px;
+}
+
+.item {
+  font-family: $quando;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  background: $grey_light;
+  margin-bottom: 21px;
+  padding: 16px 0 8px 89px;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: relative;
+}

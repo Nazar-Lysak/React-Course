@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
+import varibles from '../../styles/varibles.scss';
+
 import Image from '../../UI/Image/Image';
 import Text from '../../UI/Text/Text';
 
 const CardWrapper = styled.div`
   height: 453px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: ${varibles.borderlighten};
+  background: ${varibles.light};
   cursor: pointer;
   overflow: hidden;
 
