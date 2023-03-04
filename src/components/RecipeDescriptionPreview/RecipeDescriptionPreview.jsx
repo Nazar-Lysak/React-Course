@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 const RecipeDescriptionPreview = ({data}) => {
   return (
     <Wrapper>
-      <Image img={data[0].items[0].image} alt={data[0].items[0].name} />
+      <Image img={process.env.PUBLIC_URL + data[0].items[0].image} alt={data[0].items[0].name} />
       <div className={styles.content}>
         <p className={styles.title}>{data[0].items[0].name}</p>
         <p className={styles.text}>
