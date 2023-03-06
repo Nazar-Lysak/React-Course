@@ -28,13 +28,12 @@ const AdditionalDescription = styled.div`
   }
 `;
 
-const RecipeFullDescription = ({data}) => {
-  console.log(data[0].items[0].recipe);
+const RecipeFullDescription = ({data, activeRecipe}) => {
   return (
     <DetilesWrap>
-      <RecipeIngredientsList data={data} />
+      <RecipeIngredientsList data={data} activeRecipe={activeRecipe} />
       <AdditionalDescription>
-        <p>{data[0].items[0].recipe}</p>
+        <p>{activeRecipe.recipe}</p>
       </AdditionalDescription>
       <Button title={'Back'} type={'warning'} position={'right'} />
     </DetilesWrap>

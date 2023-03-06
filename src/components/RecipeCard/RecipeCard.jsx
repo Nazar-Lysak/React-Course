@@ -19,7 +19,8 @@ const AdditionalOptions = styled.div`
   gap: 13px;
 `;
 
-const RecipeCard = ({recipe}) => {
+const RecipeCard = ({recipe, setActiveRecipe}) => {
+  
   return (
     <CardWrapper>
       <Image img={process.env.PUBLIC_URL + recipe.image} alt={'Yummy Recipes'} />
@@ -28,7 +29,7 @@ const RecipeCard = ({recipe}) => {
         <Button type={'additional'} title={'Additional'} />
         <Button type={'additional'} title={'Main'} />
       </AdditionalOptions>
-      <Button type={'card'} title={'Show details'} />
+      <Button type={'card'} title={'Show details'} setActiveRecipe={setActiveRecipe} recipe={recipe}/>
     </CardWrapper>
   );
 };

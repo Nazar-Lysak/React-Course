@@ -10,13 +10,13 @@ const RecipesWrap = styled.div`
   padding-bottom: 40px !important;
 `;
 
-const List = ({data}) => {
+const List = ({data, setActiveRecipe}) => {
   const allReripes = data.map((el) => el.items).reduce((acc, val) => acc.concat(val), []);
 
   return (
     <RecipesWrap className={'wrapperS'}>
       {allReripes.map((recipe, index) => {
-        return <RecipeCard key={index} recipe={recipe} />;
+        return <RecipeCard key={index} setActiveRecipe={setActiveRecipe} recipe={recipe} />;
       })}
     </RecipesWrap>
   );

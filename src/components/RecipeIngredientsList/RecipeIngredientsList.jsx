@@ -2,10 +2,10 @@ import Checkbox from '../../UI/Checkbox/Checkbox';
 
 import styles from './RecipeIngredientsList.module.scss';
 
-const RecipeIngredientsList = ({data}) => {
+const RecipeIngredientsList = ({data, activeRecipe}) => {
   return (
     <ul className={styles.list}>
-      {data[0].items[0].ingredients.map((elem, index) => {
+      {activeRecipe.ingredients.map((elem, index) => {
         return (
           <li className={styles.item} key={index}>
             {elem}

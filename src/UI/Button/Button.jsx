@@ -116,7 +116,7 @@ const Btn = styled.button`
 
 const Button = (props) => {
   return (
-    <Btn type={props.type} position={props.position}>
+    <Btn type={props.type} position={props.position} onClick={() => props.setActiveRecipe(props.recipe)}>
       {props.title}
     </Btn>
   );
