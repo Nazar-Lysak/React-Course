@@ -8,6 +8,7 @@ import List from './Pages/List/List';
 import {data} from './api/api';
 
 import './App.scss';
+import RootComponent from './pekemons/RootComponent';
 
 function App() {
 
@@ -15,10 +16,12 @@ function App() {
 
   return (
     <>
+      <RootComponent />
       {/* <Header /> */}
       {/* <Home data={data} /> */}
       <List data={data} setActiveRecipe={setActiveRecipe} />
       {Object.keys(activeRecipe).length && <Detiles data={data} activeRecipe={activeRecipe} />}
+      
 
     </>
   );
