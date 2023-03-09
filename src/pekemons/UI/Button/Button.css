@@ -4,22 +4,22 @@
     transition: .2s;
 }
 
-.Fire, .Fire:hover {
+.Fire_active, .Fire:hover {
     color: red;
     border: red 1px solid;
 }
 
-.Water, .Water:hover {
+.Water_active, .Water:hover {
     color: rgb(61, 61, 252);
     border: rgb(80, 80, 255) 1px solid;
 }
 
-.Grass, .Grass:hover {
+.Grass_active, .Grass:hover {
     color: green;
     border: green 1px solid;
 }
 
-.Electric, .Electric:hover {
+.Electric_active, .Electric:hover {
     color: rgb(25, 25, 100);
     border: rgb(25, 25, 100) 1px solid;
 }
