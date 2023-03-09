@@ -9,6 +9,7 @@ import {data} from './api/api';
 
 import './App.scss';
 import RootComponent from './pekemons/RootComponent';
+import Root from './tic-tac-toe/Root';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Root />
       <RootComponent />
       {/* <Header /> */}
       {/* <Home data={data} /> */}
