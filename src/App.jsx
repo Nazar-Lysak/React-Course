@@ -8,8 +8,8 @@ import List from './Pages/List/List';
 import {data} from './api/api';
 
 import './App.scss';
-import RootComponent from './pekemons/RootComponent';
-import Root from './tic-tac-toe/Root';
+// import Pekemons from './projects/pekemons/Pekemons';
+// import TicTacToe from './projects/tic-tac-toe/TicTacToe';
 
 function App() {
 
@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-      <Root />
-      <RootComponent />
+      {/* <TicTacToe />
+      <Pekemons /> */}
       {/* <Header /> */}
       {/* <Home data={data} /> */}
       <List data={data} setActiveRecipe={setActiveRecipe} />
