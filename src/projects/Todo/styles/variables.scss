@@ -1,0 +1,32 @@
+$purple:     #8284FA;
+$purple_dark:#5E60CE;
+$blue:       #4EA8DE;
+$blue_dark:  #1E6F9F;
+$gray_700:   #0D0D0D;
+$gray_600:   #1A1A1A;
+$gray_500:   #262626;
+$gray_400:   #333333;
+$gray_300:   #808080;
+$gray_200:   #D9D9D9;
+$gray_100:   #F2F2F2;
+$danger:     #E25858;
+
+// Font
+
+$font_inter: 'Inter', sans-serif;
+
+:export {
+    purple: $purple;
+    purple_dark: $purple_dark;
+    blue: $blue;
+    blue_dark: $blue_dark;
+    gray_700: $gray_700;
+    gray_600: $gray_600;
+    gray_500: $gray_500;
+    gray_400: $gray_400;
+    gray_300: $gray_300;
+    gray_200: $gray_200;
+    gray_100: $gray_100;
+    danger: $danger;  
+    font_inter: $font_inter; 
+}
