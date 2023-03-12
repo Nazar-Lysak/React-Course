@@ -20,7 +20,6 @@ const AdditionalOptions = styled.div`
 `;
 
 const RecipeCard = ({recipe, setActiveRecipe}) => {
-  
   return (
     <CardWrapper>
       <Image img={process.env.PUBLIC_URL + recipe.image} alt={'Yummy Recipes'} />
@@ -29,7 +28,7 @@ const RecipeCard = ({recipe, setActiveRecipe}) => {
         <Button type={'additional'} title={'Additional'} />
         <Button type={'additional'} title={'Main'} />
       </AdditionalOptions>
-      <Button type={'card'} title={'Show details'} setActiveRecipe={setActiveRecipe} recipe={recipe}/>
+      <Button type={'card'} title={'Show details'} setActiveRecipe={setActiveRecipe} recipe={recipe} />
     </CardWrapper>
   );
 };

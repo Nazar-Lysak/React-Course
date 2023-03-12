@@ -10,7 +10,6 @@ const DetilesWrap = styled.div`
 `;
 
 const Detiles = ({data, activeRecipe}) => {
-
   return (
     <DetilesWrap className={'wrapperXL'}>
       <RecipeDescriptionPreview data={data} activeRecipe={activeRecipe} />

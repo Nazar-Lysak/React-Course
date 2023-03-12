@@ -1,24 +1,24 @@
 import styled from 'styled-components';
 
 import Input from '../../UI/Input/Input';
-import { Button } from '../../UI/Button/Button';
+import {Button} from '../../UI/Button/Button';
 
 const Wrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    top: -27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  top: -27px;
 `;
 
-const Form = () => {
+const Form = ({addTask, getTextInput, inputValue}) => {
   return (
     <Wrapper>
-        <Input />
-        <Button />
+      <Input getTextInput={getTextInput} inputValue={inputValue} />
+      <Button text={'Add Todo'} type={'add'} click={addTask} inputValue={inputValue} />
     </Wrapper>
-  )
+  );
 };
 
 export default Form;

@@ -1,4 +1,3 @@
-
 const Output = ({result}) => {
   return <p style={{display: 'inline-block'}}>{result}</p>;
 };

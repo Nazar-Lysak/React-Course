@@ -1,13 +1,11 @@
-@use './fonts.scss';
+@use './TodoFonts.scss';
 
 // Fonts
 
 $font_inter: 'Inter', sans-serif;
 
-// Colors
-
 $purple:      #8284FA;
-$purpl_-dark: #5E60CE;
+$purple_dark: #5E60CE;
 $blue:        #4EA8DE;
 $blue_dark:   #1E6F9F;
 $gray_700:    #0D0D0D;
@@ -20,6 +18,7 @@ $gray_100:    #F2F2F2;
 $danger:      #E25858;
 
 :export {
+    font_inter: $font_inter;
     purple: $purple;
     purple_dark: $purple_dark;
     blue: $blue;
@@ -31,5 +30,6 @@ $danger:      #E25858;
     gray_300: $gray_300;
     gray_200: $gray_200;
     gray_100: $gray_100;
+    danger: $danger;                 
     danger: $danger; 
 }
