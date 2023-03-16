@@ -25,7 +25,7 @@ const Header = () => {
     <HeaderWrap>
       <AlignContainer className="wrapperM">
         <Logo title={'Recipe'} />
-        <Navigation links={['Home', 'List', 'Search']} />
+        <Navigation links={['Home', 'List', 'Search','Todo-List', 'Tic-Tac-Toe', 'Pekemons']} />
       </AlignContainer>
     </HeaderWrap>
   );

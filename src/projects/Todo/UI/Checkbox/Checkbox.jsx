@@ -21,9 +21,9 @@ const Input = styled.div`
   }
 `;
 
-const Checkbox = ({todo, doneTask}) => {
+const Checkbox = ({todo, dispatch}) => {
 
-  return <Input className={todo.done && 'active'} onClick={() => doneTask(todo.id)} />;
+  return <Input className={todo.done && 'active'} onClick={() => dispatch({type: 'done', id: todo.id})} />;
 };
 
 export default Checkbox;

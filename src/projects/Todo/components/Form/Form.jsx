@@ -12,11 +12,11 @@ const Wrapper = styled.div`
   top: -27px;
 `;
 
-const Form = ({addTask, getTextInput, inputValue}) => {
+const Form = ({dispatch, getTextInput, inputValue}) => {
   return (
     <Wrapper>
       <Input getTextInput={getTextInput} inputValue={inputValue} />
-      <Button text={'Add Todo'} type={'add'} click={addTask} inputValue={inputValue} />
+      <Button text={'Add Todo'} type={'add'} click={dispatch} inputValue={inputValue} />
     </Wrapper>
   );
 };

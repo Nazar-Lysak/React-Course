@@ -27,14 +27,14 @@ const Num = styled.span`
   margin-top: 0;
 `;
 
-const Tasktracker = ({todos}) => {
+const Tasktracker = ({task}) => {
   return (
     <Wrapper>
       <div style={{display: 'flex'}}>
-        <Text text={'All tasks'} bold color={todoVariables.blue} /> <Num>{todos.length}</Num>
+        <Text text={'All tasks'} bold color={todoVariables.blue} /> <Num>{task.length}</Num>
       </div>
       <div style={{display: 'flex'}}>
-        <Text text={'Done'} bold color={todoVariables.purple} /> <Num>{todos.filter(el => el.done).length} of {todos.length}</Num>
+        <Text text={'Done'} bold color={todoVariables.purple} /> <Num>{task.filter(el => el.done).length} of {task.length}</Num>
       </div>
     </Wrapper>
   );

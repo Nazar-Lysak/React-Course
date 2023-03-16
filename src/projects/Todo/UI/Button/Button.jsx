@@ -68,7 +68,7 @@ export const Button = (props) => {
   return (
     <ButtonApply 
       type={props.type} 
-      onClick={() => props.click(props.id)}
+      onClick={() => props.click({type: props.type, id: props.id, body: props.inputValue})}
     >{
       props.text}    
     </ButtonApply>

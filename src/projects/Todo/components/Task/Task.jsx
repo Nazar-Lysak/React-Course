@@ -18,15 +18,16 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const Task = ({removeTask, todo, doneTask}) => {
+const Task = ({dispatch, todo}) => {
+  // console.log(todo)
   return (
     <Wrapper>
-      <Checkbox todo={todo} doneTask={doneTask} />
+      <Checkbox todo={todo} dispatch={dispatch} />
       <Text
         text={todo.body}
         done={todo.done}
       />
-      <Button type={'delete'} click={removeTask} id={todo.id} />
+      <Button type={'delete'} click={dispatch} id={todo.id} />
     </Wrapper>
   );
 };

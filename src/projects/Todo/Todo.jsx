@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useReducer, useEffect } from 'react';
+import taskReducer from './reducers/taskReducer.js';
 
 import styled from 'styled-components';
 import todoVariables from './Styles/TodoVariables.scss';
@@ -25,38 +26,23 @@ const Wrapper = styled.div`
 
 const Todo = () => {
 
-    const [todos, setTodos] = useState(todosApi);
-    const [loadTodo, setLoadTodo] = useState(false);
-    const [inputValue, setInputValue] = useState('')
+  const [task, dispatch] = useReducer(taskReducer, todosApi);
+  const [loadTodo, setLoadTodo] = useState(false);
+  const [inputValue, setInputValue] = useState('');  
 
-    const addTask = (id = new Date()) => {
-      if(!inputValue.length) return;
-      setLoadTodo(true);
+  useEffect(() => {
+    setLoadTodo(true);
+    const timeoutId = setTimeout(() => {
+      setLoadTodo(false);
+      setInputValue('');
+    }, 450);
+    return () => clearInterval(timeoutId);
 
-      setTimeout(() => {
-        setTodos(prev => [...prev, 
-          {id: id, done: false, body: inputValue}
-        ]);
-        setInputValue('');
-        setLoadTodo(false); 
-      }, 800);            
-    };
+  }, [task.length]);
 
-    const removeTask = (id) => {
-      setLoadTodo(true);
-      setTimeout(() => {
-        setTodos(todos.filter(el => el.id !== id))
-        setLoadTodo(false); 
-      }, 450);         
-    };
-
-    const doneTask = (id) => {
-      setTodos(todos.map(el => el.id === id ? { ...el, done: !el.done } : el));        
-    };
-
-    const getTextInput = (value) => {
-      setInputValue(value);
-    };  
+  const getTextInput = (value) => {
+    setInputValue(value);
+  };  
 
   return (
     
@@ -65,23 +51,20 @@ const Todo = () => {
       <div className={'wrapperXS'}>
         <Form 
           getTextInput={getTextInput} 
-          addTask={addTask} 
+          dispatch={dispatch} 
           inputValue={inputValue} 
         />
-        <Tasktracker todos={todos} />
-        {loadTodo && <Loader/>}
-        {!loadTodo &&
-          todos.map(todo => (
-          <Task 
-            key={todo.id} 
-            removeTask={removeTask} 
-            todo={todo} 
-            doneTask={doneTask} 
-          />))
+        <Tasktracker task={task} />
+        {loadTodo
+            ? <Loader />
+            : task.map(todo => (
+              <Task 
+                key={todo.id} 
+                dispatch={dispatch} 
+                todo={todo} 
+              />))
         }
-        {
-          (todos.length < 1 && !loadTodo) && <Empty />
-        }
+        {(task.length < 1 && !loadTodo) && <Empty />}
       </div>
     </Wrapper>
   );
