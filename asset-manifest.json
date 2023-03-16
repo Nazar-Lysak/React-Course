@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Course/static/css/main.67c00d0b.css",
-    "main.js": "/React-Course/static/js/main.4afeb941.js",
+    "main.js": "/React-Course/static/js/main.90668805.js",
     "static/media/clipboard.svg": "/React-Course/static/media/clipboard.2dfbc3085331b3e4f3d4276cd92718d2.svg",
     "static/media/trash-h.svg": "/React-Course/static/media/trash-h.1ae4bd54fe8adb1c68bca0e3badfc1e9.svg",
     "static/media/trash.svg": "/React-Course/static/media/trash.1afcc0f4e414a1aa28112b52887c07b5.svg",
@@ -9,10 +9,10 @@
     "index.html": "/React-Course/index.html",
     "static/media/checked.svg": "/React-Course/static/media/checked.23250bc099e8a139df98f8d8a1cfc074.svg",
     "main.67c00d0b.css.map": "/React-Course/static/css/main.67c00d0b.css.map",
-    "main.4afeb941.js.map": "/React-Course/static/js/main.4afeb941.js.map"
+    "main.90668805.js.map": "/React-Course/static/js/main.90668805.js.map"
   },
   "entrypoints": [
     "static/css/main.67c00d0b.css",
-    "static/js/main.4afeb941.js"
+    "static/js/main.90668805.js"
   ]
 }
