@@ -1,0 +1,36 @@
+.element_btn {
+  padding: 10px 20px;
+  border: silver 1px solid;
+  transition: 0.2s;
+}
+
+.Fire_active,
+.Fire:hover {
+  color: red;
+  border: red 1px solid;
+}
+
+.Water_active,
+.Water:hover {
+  color: rgb(61, 61, 252);
+  border: rgb(80, 80, 255) 1px solid;
+}
+
+.Grass_active,
+.Grass:hover {
+  color: green;
+  border: green 1px solid;
+}
+
+.Electric_active,
+.Electric:hover {
+  color: rgb(25, 25, 100);
+  border: rgb(25, 25, 100) 1px solid;
+}
+
+.Calculate {
+  width: 100%;
+  background-color: rgb(66, 66, 211);
+  color: #fff;
+  margin: 20px 0;
+}

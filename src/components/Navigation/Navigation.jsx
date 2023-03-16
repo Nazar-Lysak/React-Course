@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import varibles from '../../styles/varibles.scss';
 
 const Ul = styled.ul`
   display: flex;
-  gap: 10px;
+  gap: 20px;
 `;
 
 const Li = styled.li`
@@ -22,7 +23,10 @@ const Navigation = ({links}) => {
   return (
     <Ul>
       {links.map((link, index) => (
-        <Li key={index}>{link}</Li>
+        <Link to={link.toLowerCase()} key={index}>
+          <Li>{link}</Li>
+        </Link>
+        
       ))}
     </Ul>
   );

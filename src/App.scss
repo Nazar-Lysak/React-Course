@@ -23,9 +23,14 @@ body {
     max-width: $s-container;
   }
 
+  .wrapperXS {
+    max-width: $xs-container;
+  }
+
   .wrapperXL,
   .wrapperM,
-  .wrapperS {
+  .wrapperS,
+  .wrapperXS {
     margin: 0 auto;
     padding: 0 15px;
     width: 100%;

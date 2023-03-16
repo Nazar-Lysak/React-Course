@@ -13,23 +13,23 @@ const Wrapper = styled.div`
   box-shadow: ${varibles.borderlighten};
 `;
 
-const RecipeDescriptionPreview = ({data}) => {
+const RecipeDescriptionPreview = ({data, activeRecipe}) => {
   return (
     <Wrapper>
-      <Image img={process.env.PUBLIC_URL + data[0].items[0].image} alt={data[0].items[0].name} />
+      <Image img={process.env.PUBLIC_URL + activeRecipe.image} alt={activeRecipe.name} />
       <div className={styles.content}>
-        <p className={styles.title}>{data[0].items[0].name}</p>
+        <p className={styles.title}>{activeRecipe.name}</p>
         <p className={styles.text}>
           <span>Category : </span>
-          {data[0].items[0].category}
+          {activeRecipe.category}
         </p>
         <p className={styles.text}>
           <span>Time fome done : </span>
-          {data[0].items[0].timeForDone}
+          {activeRecipe.timeForDone}
         </p>
         <p className={styles.text}>
           <span>Description : </span>
-          {data[0].items[0].recipe}
+          {activeRecipe.recipe}
         </p>
       </div>
     </Wrapper>
