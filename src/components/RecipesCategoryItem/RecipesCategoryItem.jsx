@@ -23,9 +23,9 @@ const TextWrapper = styled.div`
   padding: 28px 10px 0;
 `;
 
-const RecipesCategoryItem = ({name, image, description}) => {
+const RecipesCategoryItem = ({name, image, description, renderCategody}) => {
   return (
-    <CardWrapper>
+    <CardWrapper onClick={() => renderCategody(name)}>
       <Image img={process.env.PUBLIC_URL + image} alt={name} />
       <TextWrapper>
         <Text text={name} type={'h3'} textAlign={'center'} />

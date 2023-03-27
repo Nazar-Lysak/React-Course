@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import styled from 'styled-components';
 
 const Input = styled.input`
@@ -7,8 +9,24 @@ const Input = styled.input`
   width: 20px;
 `;
 
-const Checkbox = () => {
-  return <Input type="checkbox" />;
+const Checkbox = (props) => {
+
+  const [isChecked, setIsChecked] = useState(false);
+
+    return (
+      <Input 
+        type="checkbox" 
+        checked={isChecked} 
+        onChange={() => {
+          setIsChecked(!isChecked);
+          props.setActiveElements(() => {
+            return !isChecked 
+            ? [...props.activeElements, props.index] 
+            : props.activeElements.filter(el => el !== props.index)
+          })
+        }} 
+      />
+    )
 };
 
 export default Checkbox;

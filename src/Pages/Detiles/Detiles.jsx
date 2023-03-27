@@ -9,11 +9,11 @@ const DetilesWrap = styled.div`
   gap: 8px;
 `;
 
-const Detiles = ({data, activeRecipe}) => {
+const Detiles = ({data, activeRecipe, setActiveRecipe}) => {
   return (
     <DetilesWrap className={'wrapperXL'}>
       <RecipeDescriptionPreview data={data} activeRecipe={activeRecipe} />
-      <RecipeFullDescription data={data} activeRecipe={activeRecipe} />
+      <RecipeFullDescription data={data} activeRecipe={activeRecipe} setActiveRecipe={setActiveRecipe} />
     </DetilesWrap>
   );
 };

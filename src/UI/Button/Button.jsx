@@ -116,7 +116,32 @@ const Btn = styled.button`
 
 const Button = (props) => {
   return (
-    <Btn type={props.type} position={props.position} onClick={() => props.setActiveRecipe(props.recipe)}>
+    <Btn 
+      type={props.type} 
+      position={props.position} 
+      onClick={() => {
+        switch (props.title) {
+          case 'Back':
+            props.setActiveRecipe({});
+            break;
+          case 'Primary':
+            console.log('Primary')
+            break;
+            case 'Additional':
+            console.log('Additional')
+            break;
+            case 'Main':
+            console.log('Main')
+            break;
+          case 'See Recipes':
+            console.log('See Recipes')
+            break;
+          default:
+            props.setActiveRecipe(props.recipe);
+            break;
+        }
+      }}
+    >
       {props.title}
     </Btn>
   );

@@ -13,13 +13,29 @@ const RecipesWrap = styled.div`
 `;
 
 const Home = ({data}) => {
+
+  const renderCategody = (category) => {
+    const filtredCategory = data
+      .filter((el) => category === el.name)
+      .map(el => el.items)
+      .flat();
+
+    console.log(filtredCategory)
+  }
+
   return (
     <>
       <MainBanner />
       <Text text={'Recipes'} type={'h2'} textAlign={'center'} />
       <RecipesWrap className={'wrapperXL'}>
         {data.map((category) => {
-          return <RecipesCategoryItem key={category.id} {...category} />;
+          return(
+            <RecipesCategoryItem 
+              key={category.id} 
+              {...category} 
+              renderCategody={renderCategody} 
+            />
+          )
         })}
       </RecipesWrap>
     </>

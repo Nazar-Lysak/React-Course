@@ -24,7 +24,7 @@ const RecipeCard = ({recipe, setActiveRecipe}) => {
     <CardWrapper>
       <Image img={process.env.PUBLIC_URL + recipe.image} alt={'Yummy Recipes'} />
       <AdditionalOptions>
-        <Button type={'additional'} title={'Primary'} />
+        <Button type={'additional'} title={'Primary'}  />
         <Button type={'additional'} title={'Additional'} />
         <Button type={'additional'} title={'Main'} />
       </AdditionalOptions>

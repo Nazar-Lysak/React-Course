@@ -25,6 +25,8 @@ const Text = styled.p`
         return '32px';
       case 'p':
         return '24px';
+      case 'small':
+        return '18px';
       default:
         return '24px';
     }
